@@ -83,6 +83,8 @@ let bd=document.querySelector('.b_d');
 let bc=document.querySelector('.b_c');
 let bsqr=document.querySelector('.b_sqr');
 let bf=document.querySelector('.b_f');
+let bqub=document.querySelector('.b_qub');
+let br=document.querySelector('.b_r');
 b0.addEventListener('click', b0w);
 b1.addEventListener('click', b1w);
 b2.addEventListener('click', b2w);
@@ -96,6 +98,8 @@ bd.addEventListener('click', bdw);
 bc.addEventListener('click', bcw);
 bsqr.addEventListener('click', bsqrw);
 bf.addEventListener('click', bfw);
+bqub.addEventListener('click', bqubw);
+br.addEventListener('click', brw);
 let n1='';
 let n2='';
 let op='';
@@ -166,6 +170,69 @@ function bsqrw(){
     }
     else{
         n2**=0.5;
+        inp.value=n2;
+        console.log(n2);
+    }
+}
+function fact(n){
+    if(n===1){
+        return 1;
+    }
+    else{
+        return fact(n-1)*n;
+    }
+}
+function bsqrw(){
+    console.log('hi');
+    if(dir==0){   
+        n1**=0.5;
+        inp.value=n1;
+        console.log(n1);
+    }
+    else{
+        n2**=0.5;
+        inp.value=n2;
+        console.log(n2);
+    }
+}
+
+function brw(){
+    console.log('hi');
+    if(dir==0){   
+        let tmp=[];
+        for( let n in n1){
+            tmp.unshift(n);
+        }
+        n1=tmp.join('');
+        inp.value=n1;
+        console.log(n1);
+    }
+    else{
+        for( let n in n2){
+            tmp.unshift(n);
+        }
+        n2=tmp.join('');
+        inp.value=n2;
+        console.log(n2);
+    }
+}
+function fact(n){
+    if(n===1){
+        return 1;
+    }
+    else{
+        return fact(n-1)*n;
+    }
+}
+function bqubw(){
+    console.log('hi');
+    if(dir==0){   
+        n1=Math.round(n1**0.3333333);
+        inp.value=n1;
+        console.log(n1);
+    }
+    else{
+        n2=Math.round(n2**0.3333333);
         inp.value=n2;
         console.log(n2);
     }
